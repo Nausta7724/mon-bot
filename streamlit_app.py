@@ -2,7 +2,7 @@ import streamlit as st
 import telebot
 import google.generativeai as genai
 
-# --- CONFIGURATION ---
+# --- CONFIG ---
 TOKEN = "8543306413:AAGnwDxqVDIvs4YI7QQO_QHm0sAmnGMAD14"
 AI_KEY = "AIzaSyCRbP7DOZuekCo7n0SA5sOYAA6ahfdboOU"
 
@@ -20,8 +20,8 @@ def chat(m):
     except Exception as e:
         st.error(f"Erreur : {e}")
 
-# --- LA CORRECTION EST ICI ---
+# --- BOUTON DE LANCEMENT ---
 if st.button('Lancer le Bot'):
-    st.write("✅ Le bot est en train de tourner...")
-    # Correction : on enlève le surplus pour éviter l'erreur de ta photo
-    bot.infinity_polling(timeout=60)
+    st.write("✅ Le bot tourne... Teste-le sur Telegram !")
+    # Cette ligne est la correction de ton erreur
+    bot.infinity_polling(timeout=60, long_polling_timeout=5)
